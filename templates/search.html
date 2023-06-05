@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search page</title>
+</head>
+<body>
+        <h3>{{ utc_dt }}</h3>
+            {% for comment in data %}
+        <div style="padding: 10px; background-color: #EEE; margin: 20px">
+            <p style="font-size: 24px">{{ comment }}</p>
+        </div>
+        {% endfor %}
+</body>
+</html>
