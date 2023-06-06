@@ -1,14 +1,12 @@
-from  bs4 import BeautifulSoup as bs
+from bs4 import BeautifulSoup as bs
 from urllib.request import urlopen
-url="https://translate.google.nl/?hl=en&tab=rT&sl=en&tl=ar&op=translate"
-clent=urlopen(url)
-html=clent.read()
+url = "https://translate.google.nl/?hl=en&tab=rT&sl=en&tl=ar&op=translate"
+clent = urlopen(url)
+html = clent.read()
 clent.close()
-soup=bs(html,'html.parser')
-print(soup)
+soup = bs(html, 'html.parser')
+
 container=soup.find_all("div",{"class":""})
 bs.prettify(container[1])
-
-
-
+print(soup)
 
